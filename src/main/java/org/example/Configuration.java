@@ -11,6 +11,41 @@ public class Configuration implements Serializable {
     public Configuration() {
 
         Scanner input = new Scanner(System.in);
+        boolean isValid = true;
+
+
+        do {
+            try {
+                System.out.println("Please Enter Ticket Release Rate: ");
+                ticketReleaseRate = input.nextInt();
+                isValid = false;
+
+            }catch (Exception e) {
+                System.out.println("Please enter a valid number");
+                ticketReleaseRate = input.nextInt();
+            }
+        }while(isValid);
+
+        do {
+            try {
+                System.out.println("Please Enter Customer Retrieval Rate: ");
+                customerRetrievalRate = input.nextInt();
+                isValid = false;
+            }catch (Exception e) {
+                System.out.println("Please enter a valid number");
+                customerRetrievalRate = input.nextInt();
+            }
+        }while(isValid);
+        do {
+            try{
+                System.out.println("Please Enter Max Ticket Capacity: ");
+                maxTicketCapacity = input.nextInt();
+                isValid = false;
+
+            }catch (Exception e) {
+                System.out.println("Please enter a valid number");
+            }
+        }while (isValid);
 
 
     }
