@@ -68,7 +68,7 @@ public class Configuration implements Serializable {
         // get the total number of tickets from user and validate the input
         while(true){
             try{
-                System.out.println("Please Enter Total Tickets (0< Total Tickets <= "+ maxTicketCapacity + "): ");
+                System.out.println("Please Enter Total Tickets (0 < Total Tickets <= "+ maxTicketCapacity + "): ");
                 totalTickets = input.nextInt();
                 if(totalTickets>0){
                     setTotalTickets(totalTickets);
